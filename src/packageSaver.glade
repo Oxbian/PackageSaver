@@ -68,7 +68,7 @@
         <child>
           <object class="GtkButton" id="SaveInFile">
             <property name="label" translatable="yes">Save in a file</property>
-            <property name="width-request">250</property>
+            <property name="width-request">500</property>
             <property name="height-request">25</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
@@ -77,22 +77,6 @@
             <signal name="clicked" handler="on_SaveInFile_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="y">200</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="SaveInClip">
-            <property name="label" translatable="yes">Save in clip board</property>
-            <property name="width-request">250</property>
-            <property name="height-request">25</property>
-            <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="receives-default">True</property>
-            <property name="image-position">top</property>
-            <signal name="clicked" handler="on_SaveInClip_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="x">250</property>
             <property name="y">200</property>
           </packing>
         </child>

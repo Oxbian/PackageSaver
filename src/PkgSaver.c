@@ -84,6 +84,52 @@ void on_ct2_toggled (GtkCellRendererToggle *cell, gchar *path_string, gpointer u
 	return;
 }
 
+/**
+ * @brief Function to save packageName into a file
+ * 
+ * @param btn button clicked
+ * @param user_data treeView in which data is
+ */
+void on_saveFile_clicked (GtkButton *btn, gpointer user_data)
+{
+    treeViewer *tv = (treeViewer*) user_data;
+    GtkTreeModel *model = gtk_tree_view_get_model(tv->treeView);
+    GtkTreeIter iter;
+    gtk_tree_model_get_iter_first(model, &iter);
+    FILE *fp;
+
+    fp = fopen("pkgToSave.txt", "w");
+    if (fp == NULL)
+    {
+        fprintf(stderr, "Error opening the file, please open an issue on github!");
+        exit(1);
+    }
+    int row = 0;
+
+	while (1) 
+    {
+        gchar *pkgName;
+        gboolean isKept = FALSE;
+
+        gtk_tree_model_get(model, &iter, 1, &isKept, -1); //Getting the bool of the row
+        //fprintf(stderr, "row %d\n",row);
+        /* Checking if the user asked to keep the row or not */
+        if (isKept == TRUE)
+        {
+            gtk_tree_model_get(model, &iter, 0, &pkgName, -1); // Getting the packageName
+            fputs(pkgName, fp);
+        }
+
+        if (gtk_tree_model_iter_next (model, &iter) == FALSE) 
+        {
+            break;
+        }
+        row++;
+	}
+    fclose(fp);
+    //fprintf(stderr, "File closed");
+}
+
 void on_destroy()
 {
     gtk_main_quit();

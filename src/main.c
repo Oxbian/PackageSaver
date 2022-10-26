@@ -21,6 +21,8 @@ int main(int argc, char *argv[])
     GtkCellRenderer *ct1 = GTK_CELL_RENDERER(gtk_builder_get_object(builder, "ct1"));
     GtkCellRenderer *ct2 = GTK_CELL_RENDERER(gtk_builder_get_object(builder, "ct2"));
     GtkTreeSelection *select = GTK_TREE_SELECTION(gtk_builder_get_object(builder, "select"));
+    GtkButton *saveFileButton = GTK_BUTTON(gtk_builder_get_object(builder, "SaveInFile"));
+
 
     gtk_tree_view_column_add_attribute(cx1, ct1, "text", 0); // attach renderer to column
     gtk_tree_view_column_add_attribute(cx2, ct2, "active", 1); // attach renderer to column
@@ -32,6 +34,7 @@ int main(int argc, char *argv[])
 
     /*Connection all the signal*/
     g_signal_connect (ct2, "toggled", G_CALLBACK (on_ct2_toggled), &tv);
+    g_signal_connect (saveFileButton, "clicked", G_CALLBACK (on_saveFile_clicked), &tv);
 
 	gtk_widget_show_all(window);
 
@@ -40,5 +43,5 @@ int main(int argc, char *argv[])
 }
 
 // TODO: free all when exiting
-// saving the actions into a file ou clipboard
 // adding a research by name feature
+

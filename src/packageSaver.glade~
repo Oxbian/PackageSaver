@@ -56,6 +56,9 @@
                     <property name="title" translatable="yes" context="Label of column keeping the program ?">Keeping ?</property>
                     <property name="expand">True</property>
                     <property name="alignment">0.5</property>
+                    <child>
+                      <object class="GtkCellRendererToggle" id="ct2"/>
+                    </child>
                   </object>
                 </child>
               </object>
@@ -86,7 +89,6 @@
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
             <property name="image-position">top</property>
-            <signal name="clicked" handler="on_SaveInClip_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="x">250</property>
