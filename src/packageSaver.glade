@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkTreeStore" id="TreeStore">
+    <columns>
+      <!-- column-name Texte -->
+      <column type="gchararray"/>
+      <!-- column-name Bool -->
+      <column type="gboolean"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="can-focus">False</property>
+    <property name="resizable">False</property>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkScrolledWindow" id="scroll">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="min-content-width">500</property>
+            <property name="min-content-height">200</property>
+            <child>
+              <object class="GtkTreeView" id="tv1">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="model">TreeStore</property>
+                <property name="enable-grid-lines">horizontal</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="select">
+                    <signal name="changed" handler="on_select_changed" swapped="no"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="cx1">
+                    <property name="sizing">autosize</property>
+                    <property name="min-width">100</property>
+                    <property name="title" translatable="yes" context="Label of the package column">Package name</property>
+                    <property name="expand">True</property>
+                    <property name="alignment">0.5</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="ct1"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="cx2">
+                    <property name="min-width">100</property>
+                    <property name="title" translatable="yes" context="Label of column keeping the program ?">Keeping ?</property>
+                    <property name="expand">True</property>
+                    <property name="alignment">0.5</property>
+                    <child>
+                      <object class="GtkCellRendererToggle" id="ct2"/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="SaveInFile">
+            <property name="label" translatable="yes">Save in a file</property>
+            <property name="width-request">250</property>
+            <property name="height-request">25</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image-position">top</property>
+            <signal name="clicked" handler="on_SaveInFile_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="y">200</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="SaveInClip">
+            <property name="label" translatable="yes">Save in clip board</property>
+            <property name="width-request">250</property>
+            <property name="height-request">25</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image-position">top</property>
+            <signal name="clicked" handler="on_SaveInClip_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">250</property>
+            <property name="y">200</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

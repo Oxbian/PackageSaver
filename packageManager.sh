@@ -82,7 +82,7 @@ do
     ;;
 
     #Pacman is the package manager
-    pacman) currPkg=$(pacman -Q | sed -n "${pkgI}p" | cut -d" " -f1)
+    pacman) currPkg=$(pacman -Q | sed -n "${pkgI}p" | cut -d " " -f1)
     ;;
 
   esac
