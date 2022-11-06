@@ -98,7 +98,7 @@ void on_saveFile_clicked (GtkButton *btn, gpointer user_data)
     gtk_tree_model_get_iter_first(model, &iter);
     FILE *fp;
 
-    fp = fopen("pkgToSave.txt", "w");
+    fp = fopen("packageToKeep.txt", "w");
     if (fp == NULL)
     {
         fprintf(stderr, "Error opening the file, please open an issue on github!");
