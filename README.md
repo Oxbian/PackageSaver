@@ -9,11 +9,13 @@
 
 ## Package Saver what is it ?
 
-It's a tools to save the package you want to keep for your reinstallation. They are all in a txt file, just need paste them after your reinstallation to have it back
+It's a tool to save packages you want to keep for your distro-hopping. They are all in a txt file, just need paste them after your reinstallation to have it back
 
 ## What is automated ?
 
-Currently the only automed thing is the detection and the parsing of your package manager (for the moment only pacman and apk are parsed and working). Later I will work on a GUI and a way to just use this programs to reinstall package from a list of packages.
+Currently the only automed thing is the detection and the parsing of your package manager (for the moment only pacman and apk are parsed and working, if you want you can help by adding a parsing and making a pull request).
+
+A GUI is in work in progress build, check the GUI branch.
 
 ## How to use it ?
 
