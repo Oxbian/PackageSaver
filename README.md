@@ -3,8 +3,8 @@
 
 ![Release](https://img.shields.io/badge/Release-v1.0-brightgreen?style=for-the-badge)
 ![Language](https://img.shields.io/badge/Language-Bash-blue?style=for-the-badge)
-![Size](https://img.shields.io/github/repo-size/ARKAGEDON/PackageSaver?label=SIZE&style=for-the-badge)
-![Licence](https://img.shields.io/github/license/ARKAGEDON/PackageSaver?style=for-the-badge)
+![Size](https://img.shields.io/github/repo-size/Oxbian/PackageSaver?label=SIZE&style=for-the-badge)
+![Licence](https://img.shields.io/github/license/Oxbian/PackageSaver?style=for-the-badge)
 ![OpenSource](https://img.shields.io/badge/OpenSource-blue?style=for-the-badge&logo=opencollective&logoColor=white)
 
 ## Package Saver what is it ?
