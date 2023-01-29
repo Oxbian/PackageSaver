@@ -19,6 +19,8 @@ A GUI is in work in progress build, check the GUI branch.
 
 ## How to use it ?
 
+### If you want to use the command line
+
 1) Make sure you have the correct permission to use it
 
 > chmod 777 packageManager.sh
@@ -26,6 +28,16 @@ A GUI is in work in progress build, check the GUI branch.
 2) Just run it and say yes or no if you want to keep this package (by default it's no so just need to write Y or y if you want to keep it)
 
 > ./packageManager.sh
+
+### If you want to use the GUI
+
+1) Compile the project
+
+> make
+
+2) Run the programs, check packages you want to keeps, and after click on the "Save in a file" button.
+
+> ./PackageSaver
 
 ## How to contribute ?  
   

@@ -1,0 +1,12 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/arka/Documents/Dev/C/Projets/PackageSaver",
+            "binaryPath": "/home/arka/Documents/Dev/C/Projets/PackageSaver/PackageSaver",
+            "binaryArgs": []
+        }
+    ],
+    "files.associations": {
+        "random": "c"
+    }
+}
