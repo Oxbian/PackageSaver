@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
     /*Initialisation of the window*/
     gtk_init(&argc, &argv);
 
-    GtkBuilder *builder = gtk_builder_new_from_file("src/packageSaver.glade");
+    GtkBuilder *builder = gtk_builder_new_from_file("assets/glade/packageSaver.glade");
     GtkWidget *window = GTK_WIDGET(gtk_builder_get_object(builder, "window"));
 
     g_signal_connect(window, "destroy", G_CALLBACK(on_destroy), NULL);
@@ -41,7 +41,4 @@ int main(int argc, char *argv[])
 	gtk_main();
 	return EXIT_SUCCESS;
 }
-
-// TODO: free all when exiting
-// adding a research by name feature
 
